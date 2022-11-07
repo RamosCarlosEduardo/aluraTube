@@ -1,0 +1,21 @@
+{
+    "name":  "Carlos Eduardo Ramos",
+    "job": "Front-End Developer",
+    "github": "ramoscarloseduardo",
+    "playlists": {
+        "jogos": [
+            {
+                "title": "Algum titulo",
+                "url": "url",
+                "thumb": "thumb do video"
+            }
+        ],
+        "front-end": [
+            {
+                "title": "Algum titulo",
+                "url": "url",
+                "thumb": "thumb do video"
+            }
+        ]
+    }
+}
