@@ -2,6 +2,7 @@
     "name":  "Carlos Eduardo Ramos",
     "job": "Front-End Developer",
     "github": "ramoscarloseduardo",
+    "banner": "https://images.unsplash.com/photo-1455849318743-b2233052fcff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
     "playlists": {
         "jogos": [
             {
@@ -134,11 +135,11 @@
     "Favoritos": [
       {
         "thumb": "https://github.com/omariosouto.png",
-        "name": "@omariosouto"
+        "name": "omariosouto"
       },
       {
         "thumb": "https://github.com/ramoscarloseduardo.png",
-        "name": "@ramoscarloseduardo"
+        "name": "ramoscarloseduardo"
       }
     ]
 }

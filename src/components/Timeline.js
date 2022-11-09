@@ -46,32 +46,39 @@ const StyledTimeline = styled.div`
   }
 `;
 
-export default function Timeline (props){
-    const playlistsNames = Object.keys(props.playlists)
-    
-    return (
-        <StyledTimeline>
-            {playlistsNames.map( (playlistsName) => {
-                const videos = props.playlists[playlistsName]
-                
-                return (
-                    <section>
-                    <h2>{playlistsName}</h2>
-                    <div>
-                        {videos.map( (video) => {
-                            return (
-                                <a href={video.url}>
-                                    <img src={video.thumb}/>
-                                    <span>
-                                        {video.title}
-                                    </span>
-                                </a>
-                            )
-                        })}
-                    </div>
-                    </section>
-                )
-            })}
-        </StyledTimeline>
-    )
+export default function Timeline({ searchValue, ...props }) {
+	const playlistsNames = Object.keys(props.playlists)
+
+	return (
+		<StyledTimeline>
+			{playlistsNames.map((playlistsName) => {
+				const videos = props.playlists[playlistsName]
+
+				return (
+					<section key={playlistsName}>
+						<h2>{playlistsName}</h2>
+						<div>
+							{videos
+								.filter((video) => {
+									const titleNormalized = video.title.toLowerCase()
+									const searchValueNormalized = searchValue.toLowerCase()
+
+									return titleNormalized.includes(searchValueNormalized)
+								})
+								.map((video) => {
+									return (
+										<a href={video.url} key={video.url} target="_blank">
+											<img src={video.thumb} />
+											<span>
+												{video.title}
+											</span>
+										</a>
+									)
+								})}
+						</div>
+					</section>
+				)
+			})}
+		</StyledTimeline>
+	)
 }

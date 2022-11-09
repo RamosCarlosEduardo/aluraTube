@@ -1,6 +1,4 @@
 import styled from "styled-components";
-// import config from "../../config.json";
-
 
 const StyledFavoritos = styled.div`
     h2 {
@@ -26,6 +24,7 @@ const StyledFavoritos = styled.div`
         align-items: center;
         justify-content: center;
         gap: 1rem;
+        color: black;
     }
     span {
         font-size: 1rem;
@@ -43,10 +42,10 @@ export default function Favoritos(props) {
                 {favoritos.map((fav) => {
 
                     return (
-                        <div className="favoritos-container">
+                        <a className="favoritos-container" key={fav.name} href={`https://github.com/${fav.name}`} target="_blank">
                             <img src={fav.thumb} />
-                            <span>{fav.name}</span>
-                        </div>
+                            <span>{`@${fav.name}`}</span>
+                        </a>
                     )
                 })}
             </div>

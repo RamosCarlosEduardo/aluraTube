@@ -1,19 +1,23 @@
+import React from "react";
 import config from "../config.json";
 import { CSSReset } from "../src/components/CSSReset";
-import Menu from "../src/components/Menu";
+import Menu from "../src/components/menu/Index";
 import Timeline, { StyledTimeline } from "../src/components/Timeline";
 import Header from "../src/components/Header";
 import Favoritos from "../src/components/Favoritos";
 
 
+
 function homePage(){
+    const [valorDoFiltro, setValorDoFiltro] = React.useState("");
+
     return (
     <>
         <CSSReset/>
         <div>
-            <Menu/>
+            <Menu valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValorDoFiltro} />
             <Header/>
-            <Timeline playlists={config.playlists}/>
+            <Timeline searchValue={valorDoFiltro} playlists={config.playlists}/>
             <Favoritos favoritos={config.Favoritos}/>
         </div>
     </>

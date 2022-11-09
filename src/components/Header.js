@@ -1,11 +1,16 @@
 import styled from "styled-components";
 import config from "../../config.json";
-import bannerImg from '../assets/Banner.png'
+
 
 const StyledHeader = styled.div`
     .banner {
         width: 100%;
-        height: 250px;
+        height: 350px;
+        background: url(${config.banner});
+        background-size: cover;
+        background-position: 0 -320px;
+        background-repeat: no-repeat;
+        filter: contrast(120%);
     }
     .profile {
         display: flex;
@@ -43,7 +48,7 @@ const StyledHeader = styled.div`
 export default function Header (){
     return (
         <StyledHeader>
-            <img className="banner" src={bannerImg.src}/>
+            <div className="banner"></div>
             <div className="profile">
                 <img className="profile__img" src={`http://www.github.com/${config.github}.png`}/>
                 <div className="profile__infos">
