@@ -3,6 +3,8 @@ import config from "../../config.json";
 
 
 const StyledHeader = styled.div`
+    background-color: ${ ( {theme} ) => theme.backgroundLevel1 };
+
     .banner {
         width: 100%;
         height: 350px;
@@ -41,7 +43,7 @@ const StyledHeader = styled.div`
         font-weight: 400;
         font-size: 16px;
         line-height: 18px;
-        color: #666666;
+        color: ${ ( { theme } ) => theme.colorTextBase };
     }
 `
 

@@ -66,8 +66,10 @@ export default function Timeline({ searchValue, ...props }) {
 									return titleNormalized.includes(searchValueNormalized)
 								})
 								.map((video) => {
+                  const idVideo = video.url.split("=")[1]
+
 									return (
-										<a href={video.url} key={video.url} target="_blank">
+										<a href={`/video?v=${idVideo}`} key={video.url}>
 											<img src={video.thumb} />
 											<span>
 												{video.title}

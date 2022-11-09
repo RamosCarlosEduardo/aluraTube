@@ -24,7 +24,7 @@ const StyledFavoritos = styled.div`
         align-items: center;
         justify-content: center;
         gap: 1rem;
-        color: black;
+        color: ${ ({theme}) => theme.textColorBase};
     }
     span {
         font-size: 1rem;
