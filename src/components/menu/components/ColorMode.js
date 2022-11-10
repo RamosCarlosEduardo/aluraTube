@@ -6,6 +6,8 @@ export const ColorModeContext = React.createContext({
     toggleMode: () => { alert("Você precisa me configurar primeiro!")  },
 });
 
+
+
 export default function ColorModeProvider(props) {
     const [mode, setMode] = React.useState(props.initialMode);
 

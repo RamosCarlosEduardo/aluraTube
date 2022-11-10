@@ -9,7 +9,7 @@ import Favoritos from "../src/components/Favoritos";
 
 function homePage(){
     const [valorDoFiltro, setValorDoFiltro] = React.useState("");
-
+    
     return (
     <>
         <div>
